@@ -1,0 +1,21 @@
+<h1 class="text-center">Listing Codes</h1>
+<div class="container">
+      <p id="notice"><%= notice %></p>
+    <% @codes.each do |code| %>
+  <div class="list-group">
+  <a href="#" class="list-group-item active">
+    <h4 class="list-group-item-heading"><%= code.title %></h4>
+    <p class="list-group-item-text"><%= truncate(code.codeblock, :length => 100) %></p>
+  </a>
+         <%= link_to 'Show', code ,class: 'btn'%>
+    <% if user_signed_in? %>
+        
+        <%= link_to 'Edit', edit_code_path(code) ,class: 'btn'%>
+        <%= link_to 'Destroy', code, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn'%>
+    <% end%>
+</div>
+<hr>
+<% end %>
+
+<%= link_to 'New Code', new_code_path,class: 'btn col-md-12' if user_signed_in? %>
+</div>
