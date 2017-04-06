@@ -1,20 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  
+<div class="panel panel-default">
+  <div class="panel-heading"><%= @code.title %></div>
+  <div class="panel-body">
+    <%= @code.codeblock.html_safe %>
+    <hr>
+    <h3> Categories :<span class="badge">  <%= @code.domain %></span></h3>
+  </div>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @code.title %>
-</p>
-
-<p>
-  <strong>Domain:</strong>
-  <%= @code.domain %>
-</p>
-
-<p>
-  <strong>Codeblock:</strong>
-<code>  <%= @code.codeblock.html_safe %>
-</code>
-</p>
 
 <%= link_to 'Edit', edit_code_path(@code) %> |
 <%= link_to 'Back', codes_path %>
+
+</div>

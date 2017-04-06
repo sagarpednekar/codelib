@@ -12,6 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap
+ *= require font_awesome
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "froala_editor.min.css";
+@import "froala_style.min.css";
+@import "font-awesome.css";
+body { padding-top: 70px; }

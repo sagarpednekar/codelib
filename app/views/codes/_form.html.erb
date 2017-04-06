@@ -21,9 +21,12 @@
   </div>
   <div class="field">
     <%= f.label :codeblock %><br>
-    <%= f.text_area :codeblock %>
+    <%= f.text_area :codeblock , id: 'wysiwyg' %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+<script>
+  $('wysiwyg').froalaEditor();
+</script>
